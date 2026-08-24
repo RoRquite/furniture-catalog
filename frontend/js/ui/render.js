@@ -1,4 +1,5 @@
 // DOM rendering per screen. Mobile-first, no framework.
+import { assetURL } from "../core/assets.js";
 
 const esc = (s) => String(s).replace(/[&<>"']/g,
   (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
@@ -26,7 +27,7 @@ export function createUI(root, router, model, favorites, telegramBridge, config)
   function renderCatalog() {
     const cats = model.categories.map((c) => `
       <button class="card category-card" data-action="open-category" data-id="${esc(c.id)}">
-        <img src="${esc(c.image)}" alt="">
+        <img src="${esc(assetURL(c.image))}" alt="">
         <span class="card-title">${esc(c.name)}</span>
       </button>`).join("");
     root.innerHTML = `${header(config.shopName || "Каталог мебели")}
@@ -44,7 +45,7 @@ export function createUI(root, router, model, favorites, telegramBridge, config)
     const items = model.productsByCategory(categoryId).map((p) => `
       <button class="card product-card" data-action="open-product"
               data-id="${esc(p.id)}" data-category="${esc(p.category)}">
-        <img src="${esc(p.image)}" alt="">
+        <img src="${esc(assetURL(p.image))}" alt="">
         <span class="card-title">${esc(p.name)}</span>
         <span class="price">${esc(p.price)} ${esc(p.currency)}</span>
       </button>`).join("");
@@ -65,7 +66,7 @@ export function createUI(root, router, model, favorites, telegramBridge, config)
     root.innerHTML = `
       <div class="topbar"><button class="back" data-action="back">← Назад</button></div>
       <article class="product">
-        <img class="product-img" src="${esc(product.image)}" alt="${esc(product.name)}">
+        <img class="product-img" src="${esc(assetURL(product.image))}" alt="${esc(product.name)}">
         <h1>${esc(product.name)}</h1>
         <p class="desc">${esc(product.description)}</p>
         <p class="price big">${esc(product.price)} ${esc(product.currency)}</p>
@@ -93,7 +94,7 @@ export function createUI(root, router, model, favorites, telegramBridge, config)
       .map((p) => `
         <button class="card product-card" data-action="open-product"
                 data-id="${esc(p.id)}" data-category="${esc(p.category)}">
-          <img src="${esc(p.image)}" alt="">
+          <img src="${esc(assetURL(p.image))}" alt="">
           <span class="card-title">${esc(p.name)}</span>
           <span class="price">${esc(p.price)} ${esc(p.currency)}</span>
         </button>`).join("");

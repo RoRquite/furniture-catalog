@@ -57,6 +57,15 @@ cpSync(root + "public", root + "dist", { recursive: true });
 writeFileSync(root + "dist/data/config.json",
               JSON.stringify(conf, null, 2) + "\n");
 
+// Cache-busting: version local asset references so webviews (Telegram
+// in-app browser) never serve a stale mix of HTML/JS/CSS after redeploy.
+const V = Date.now().toString(36);
+let html = readFileSync(root + "frontend/index.html", "utf8");
+html = html.replaceAll('href="./css/styles.css"', `href="./css/styles.css?v=${V}"`);
+html = html.replaceAll('src="./js/app.js"', `src="./js/app.js?v=${V}"`);
+if (!html.includes(`?v=${V}`)) errors.push("index.html: expected asset refs not found for cache-busting");
+writeFileSync(root + "dist/index.html", html);
+
 console.log("BUILD OK:", prods.products.length,
   "products in", cats.categories.length, "categories -> dist/");
 if (appUrlValid) {
