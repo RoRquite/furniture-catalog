@@ -5,6 +5,11 @@ import { createFavorites } from "./core/favorites.js";
 import { createTelegramBridge } from "./core/telegram.js";
 import { createUI } from "./ui/render.js";
 
+// Resolve asset paths relative to this module's URL (js/app.js) so the app
+// works both at domain root (local dev server) and under a sub-path
+// (GitHub Pages project site /furniture-catalog/).
+const dataURL = (name) => new URL(`../data/${name}`, import.meta.url);
+
 async function loadJSON(path) {
   const res = await fetch(path);
   if (!res.ok) throw new Error(`failed to load ${path}: ${res.status}`);
@@ -13,9 +18,9 @@ async function loadJSON(path) {
 
 async function main() {
   const [categoriesData, productsData, config] = await Promise.all([
-    loadJSON("../data/categories.json"),
-    loadJSON("../data/products.json"),
-    fetch("../data/config.json").then((r) => r.json()).catch(() => ({})),
+    loadJSON(dataURL("categories.json")),
+    loadJSON(dataURL("products.json")),
+    fetch(dataURL("config.json")).then((r) => r.json()).catch(() => ({})),
   ]);
 
   const telegram = createTelegramBridge();
