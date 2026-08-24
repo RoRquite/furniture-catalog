@@ -1,0 +1,8 @@
+{
+  "demo": true,
+  "order": {
+    "contactUrl": "https://t.me/username_placeholder",
+    "note": "ЗАМЕНИТЕ username_placeholder на реальный Telegram-контакт магазина. Пока контакт не настроен, кнопка «Заказать» показывает текст заказа пользователю."
+  },
+  "shopName": "Каталог мебели"
+}

@@ -1,0 +1,21 @@
+{
+  "demo": true,
+  "note": "Демонстрационные данные MVP. Не являются реальными товарными предложениями.",
+  "categories": [
+    {
+      "id": "tables",
+      "name": "Столы",
+      "image": "images/cat_tables.svg"
+    },
+    {
+      "id": "chairs",
+      "name": "Стулья",
+      "image": "images/cat_chairs.svg"
+    },
+    {
+      "id": "wardrobes",
+      "name": "Шкафы",
+      "image": "images/cat_wardrobes.svg"
+    }
+  ]
+}

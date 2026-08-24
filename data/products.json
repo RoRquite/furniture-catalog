@@ -1,0 +1,96 @@
+{
+  "demo": true,
+  "note": "Демонстрационные данные MVP. Не являются реальными товарными предложениями.",
+  "products": [
+    {
+      "id": "furniture-001",
+      "category": "tables",
+      "name": "Стол письменный «Норд»",
+      "description": "Компактный письменный стол из светлого дуба с двумя ящиками.",
+      "price": "1 890 000",
+      "currency": "UZS",
+      "image": "images/p_furniture-001.svg",
+      "features": ["Массив дуба", "80×120×60 см", "2 ящика"]
+    },
+    {
+      "id": "furniture-002",
+      "category": "tables",
+      "name": "Стол обеденный «Осло»",
+      "description": "Раздвижной обеденный стол на шесть персон, белая столешница.",
+      "price": "3 250 000",
+      "currency": "UZS",
+      "image": "images/p_furniture-002.svg",
+      "features": ["Раздвижной", "140→180 см", "6 персон"]
+    },
+    {
+      "id": "furniture-003",
+      "category": "tables",
+      "name": "Журнальный столик «Фьорд»",
+      "description": "Низкий журнальный столик со скандинавским силуэтом и полкой.",
+      "price": "990 000",
+      "currency": "UZS",
+      "image": "images/p_furniture-003.svg",
+      "features": ["Полка", "Дуб/белый", "60×40 см"]
+    },
+    {
+      "id": "furniture-004",
+      "category": "chairs",
+      "name": "Стул «Берген»",
+      "description": "Обеденный стул с мягким сиденьем и деревянными ножками.",
+      "price": "640 000",
+      "currency": "UZS",
+      "image": "images/p_furniture-004.svg",
+      "features": ["Мягкое сиденье", "Бук", "До 110 кг"]
+    },
+    {
+      "id": "furniture-005",
+      "category": "chairs",
+      "name": "Кресло «Улль»",
+      "description": "Компактное кресло для чтения с высокой спинкой.",
+      "price": "2 150 000",
+      "currency": "UZS",
+      "image": "images/p_furniture-005.svg",
+      "features": ["Высокая спинка", "Ткань", "Скандинавский стиль"]
+    },
+    {
+      "id": "furniture-006",
+      "category": "chairs",
+      "name": "Барный стул «Сага»",
+      "description": "Барный стул с подножкой и регулируемой высотой.",
+      "price": "780 000",
+      "currency": "UZS",
+      "image": "images/p_furniture-006.svg",
+      "features": ["Регулировка высоты", "Подножка", "Металл/дерево"]
+    },
+    {
+      "id": "furniture-007",
+      "category": "wardrobes",
+      "name": "Шкаф «Хольм»",
+      "description": "Двухдверный шкаф с штангой и тремя полками.",
+      "price": "4 300 000",
+      "currency": "UZS",
+      "image": "images/p_furniture-007.svg",
+      "features": ["2 двери", "Штанга + 3 полки", "100×200 см"]
+    },
+    {
+      "id": "furniture-008",
+      "category": "wardrobes",
+      "name": "Гардеробная система «Плекс»",
+      "description": "Модульная гардеробная система: секции на любой метраж.",
+      "price": "5 900 000",
+      "currency": "UZS",
+      "image": "images/p_furniture-008.svg",
+      "features": ["Модульная", "Под заказ", "Белый"]
+    },
+    {
+      "id": "furniture-009",
+      "category": "wardrobes",
+      "name": "Комод «Лунд»",
+      "description": "Узкий комод на четыре ящика с доводчиками.",
+      "price": "2 050 000",
+      "currency": "UZS",
+      "image": "images/p_furniture-009.svg",
+      "features": ["4 ящика", "Доводчики", "80×45×90 см"]
+    }
+  ]
+}

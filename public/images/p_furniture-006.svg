@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <rect width="200" height="160" rx="12" fill="#dce8e0"/>
+  <rect x="60" y="60" width="80" height="14" rx="6" fill="#5c8a72"/>
+       <rect x="66" y="20" width="68" height="42" rx="10" fill="#9dc3ae"/>
+       <rect x="62" y="74" width="10" height="70" fill="#5c8a72"/>
+       <rect x="128" y="74" width="10" height="70" fill="#5c8a72"/>
+  <text x="100" y="150" text-anchor="middle" font-size="11"
+        font-family="sans-serif" fill="#5c8a72">Сага</text>
+</svg>

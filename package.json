@@ -1,0 +1,13 @@
+{
+  "name": "furniture-catalog-mini-app",
+  "version": "0.1.0-mvp",
+  "private": true,
+  "demo": true,
+  "type": "module",
+  "scripts": {
+    "images": "node scripts/gen_images.mjs",
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && node scripts/dev-server.mjs",
+    "test": "node --test tests/*.mjs"
+  }
+}
